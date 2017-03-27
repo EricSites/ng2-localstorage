@@ -8,7 +8,11 @@
 		"experimentalDecorators": true,
 		"inlineSources": true,
 		"outDir": "dist",
-		"declaration": true
+		"declaration": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ]
 	},
 	"exclude": [
 		"node_modules",
