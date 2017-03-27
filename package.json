@@ -5,39 +5,37 @@
   "scripts": {
     "lint": "tslint ./*.ts -t verbose",
     "build": "rimraf dist && tsc",
-    "postinstall": "typings install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:marcj/angular2-localstorage.git"
+    "url": "git@github.com:systembugtj/angular2-local-storage.git"
   },
   "keywords": [
     "Angular2",
     "LocalStorage"
   ],
-  "author": "Marc J. Schmidt",
+  "author": "Marc J. Schmidt, systembug",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marcj/angular2-localstorage/issues"
+    "url": "https://github.com/systembugtj/angular2-local-storage/issues"
   },
-  "homepage": "https://github.com/marcj/angular2-localstorage",
+  "homepage": "https://github.com/systembugtj/angular2-local-storage",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
     "rxjs": "^5.2.0",
     "zone.js": "^0.7.7"
   },
   "devDependencies": {
-    "@angular/core": "^4.0.0",
-    "rimraf": "^2.5.4",
-    "rxjs": "^5.2.0",
+    "rimraf": "^2.5.4",    
     "tslint": "^3.15.1",
     "typings": "^2.1.0",
-    "zone.js": "^0.7.7",
     "@types/core-js": "^0.9.39",
     "typescript": "^2.2.1"
   },
   "dependencies": {
-
+    "zone.js": "^0.7.7",
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.2.0"
   }
 }
