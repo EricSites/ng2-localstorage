@@ -17,7 +17,6 @@ This project is not maintained. Please consider taking it over. More information
 
     @NgModule({
         import: [WebStorageModule]
-    @Component({
         providers: [LocalStorageService]
     })
     export class AppModule {}
@@ -26,7 +25,7 @@ This project is not maintained. Please consider taking it over. More information
 
 3. Use the `LocalStorage` decorator
 ```typescript
-import {LocalStorage, SessionStorage} from "angular2-localstorage/WebStorage";
+import { LocalStorage, SessionStorage } from "angular2-localstorage";
 
 class MySuperComponent {
     @LocalStorage() public lastSearchQuery:Object = {};
@@ -46,24 +45,24 @@ class MySuperComponent {
 @Component({
     selector: 'app-login',
     template: `
-<form>
-    <div>
-        <input type="text" [(ngModel)]="username" placeholder="Username" />
-        <input type="password" [(ngModel)]="password" placeholder="Password" />
-    </div>
-    
-    <input type="checkbox" [(ngModel)]="rememberMe" /> Keep me logged in
+        <form>
+            <div>
+                <input type="text" [(ngModel)]="username" placeholder="Username" />
+                <input type="password" [(ngModel)]="password" placeholder="Password" />
+            </div>
 
-    <button type="submit">Login</button>
-</form>
+            <input type="checkbox" [(ngModel)]="rememberMe" /> Keep me logged in
+
+            <button type="submit">Login</button>
+        </form>
     `
 })
 class AppLoginComponent {
     //here happens the magic. `username` is always restored from the localstorage when you reload the site
     @LocalStorage() public username:string = '';
-    
+
     public password:string;
-    
+
     //here happens the magic. `rememberMe` is always restored from the localstorage when you reload the site
     @LocalStorage() public rememberMe:boolean = false;
 }
@@ -91,7 +90,7 @@ class AdminMenuComponent {
 
     //here happens the magic. `hiddenMenuItems` is always restored from the localstorage when you reload the site
     @LocalStorage() public hiddenMenuItems:Array<boolean> = [];
-    
+
     //here happens the magic. `profile` is always restored from the sessionStorage when you reload the site from the current tab/browser. This is perfect for more sensitive information that shouldn't stay once the user closes the browser.
     @SessionStorage() public profile:any = {};
 }

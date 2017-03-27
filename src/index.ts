@@ -9,4 +9,6 @@ export * from './utility/index'
     providers: [LocalStorageService, SessionStorageService]
 })
 
-export class WebStorageModule {}
+export class WebStorageModule {
+  
+}
