@@ -3,14 +3,11 @@
 This little Angular2/typescript decorator makes it super easy to save and restore *automatically* a variable state in your
 directive (class property) using HTML5' LocalStorage.
 
-## Seeking new maintainer
-
-This project is not maintained. Please consider taking it over. More information at https://github.com/open-source-chest/take-it-over.
-
 ## Use
 
 1. Download the library using npm or github: `npm install --save angular2-localstorage`
 2. Import the WebStorageModule in your app module:
+
     ```typescript
     import {Component} from "angular2/core";
     import {WebStorageModule, LocalStorageService} from "angular2-localstorage";
@@ -73,18 +70,19 @@ class AppLoginComponent {
 @Component({
     selector: 'admin-menu',
     template: `
-<div *ngFor="#menuItem of menuItems() | mapToIterable; #i = index">
-    <h2 (click)="hiddenMenuItems[i] = !!!hiddenMenuItems[i]">
-        {{i}}: {{category.label}}
-    </h2>
-    <div style="padding-left: 15px;" [hidden]="hiddenMenuItems[i]">
-        <a href>Some sub menu item 1</a>
-        <a href>Some sub menu item 2</a>
-        <a href>Some sub menu item 3</a>
-    </div>
-</div>
+        <div *ngFor="#menuItem of menuItems() | mapToIterable; #i = index">
+            <h2 (click)="hiddenMenuItems[i] = !!!hiddenMenuItems[i]">
+                {{i}}: {{category.label}}
+            </h2>
+            <div style="padding-left: 15px;" [hidden]="hiddenMenuItems[i]">
+                <a href>Some sub menu item 1</a>
+                <a href>Some sub menu item 2</a>
+                <a href>Some sub menu item 3</a>
+            </div>
+        </div>
     `
 })
+
 class AdminMenuComponent {
     public menuItems = [{title: 'Menu1'}, {title: 'Menu2'}, {title: 'Menu3'}];
 
