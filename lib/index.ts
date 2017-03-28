@@ -8,7 +8,4 @@ export * from './utility/index'
 @NgModule({
     providers: [LocalStorageService, SessionStorageService]
 })
-
-export class WebStorageModule {
-  
-}
+export class WebStorageModule {}

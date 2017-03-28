@@ -1,12 +1,13 @@
 {
 	"compilerOptions": {
 		"target": "es5",
+		"module": "commonjs",
 		"moduleResolution": "node",
 		"sourceMap": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"inlineSources": true,
-		"outDir": "dist",
+		"inlineSources": false,
+		"outDir": "./dist",
 		"declaration": true,
     "lib": [
       "es2016",
